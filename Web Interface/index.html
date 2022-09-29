@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container a-container" id="a-container">
+        <form class="form" id="a-form" method="" action="">
+          <h2 class="form_title title"></h2>
+          <div class="form__input" id="Recent_Die_Cutting">
+            <br>
+            <label>Defect&emsp;&hairsp;:</label>
+            <label class="part" id="Recent__Die_Cutting">Die Cutting</label>
+            <br>
+            <br>
+            <label>Count &emsp;&emsp;:</label>
+            <label class="defective" id="Recent__Die_Cutting__Count">0</label>
+            
+          </div>
+          <div class="form__input" id="Recent_Ink_Smudges">
+            <br>
+            <label>Defect&emsp;&hairsp;:</label>
+            <label class="part" id="Recent__Ink_Smudges">Ink Smudgess</label>
+            <br>
+            <br>
+            <label>Count &emsp;&emsp;:</label>
+            <label class="defective" id="Recent__Ink_Smudges__Count">0</label>
+          </div>
+          <div class="form__input" id="Recent_Inverted_Labels">
+            <br>
+              <label>Defect&emsp;&hairsp;:</label>
+              <label class="part" id="Recent__Inverted_Labels">Inverted Labels</label>
+            <br>
+            <br>
+              <label>Count &emsp;&emsp;:</label>
+              <label class="defective" id="Recent__Inverted_Labels__Count">0</label>
+            <br>
+          </div>
+          <div class="form__input" id="Recent_Ink_Spills">
+            <br>
+              <label>Defect&emsp;&hairsp;:</label>
+              <label class="part" id="Recent__Ink_Spills">Ink Spills</label>
+            <br>
+            <br>
+              <label>Count &emsp;&emsp;:</label>
+              <label class="defective" id="Recent__Ink_Spills__Count">0</label>
+            <br>
+          </div>
+          
+        </form>
+      </div>
+      <div class="container b-container" id="b-container">
+        <form class="form" id="b-form" method="" action="">
+          <h2 class="form_title title">Detected Defects</h2>
+          <div class="form__input" id="Current_Die_Cutting">
+            <br>
+            <label>Defect&emsp;&hairsp;:</label>
+            <label class="part" id="Current__Die_Cutting">Die Cutting</label>
+            <br>
+            <br>
+            <label>Count &emsp;&emsp;:</label>
+            <label class="defective" id="Current__Die_Cutting__Count">0</label>
+            
+          </div>
+          <div class="form__input" id="Current_Ink_Smudges">
+            <br>
+            <label>Defect&emsp;&hairsp;:</label>
+            <label class="part" id="Current__Ink_Smudges">Ink Smudges</label>
+            <br>
+            <br>
+            <label>Count &emsp;&emsp;:</label>
+            <label class="defective" id="Current__Ink_Smudges__Count">0</label>
+          </div>
+          <div class="form__input" id="Current_Inverted_Labels">
+            <br>
+              <label>Defect&emsp;&hairsp;:</label>
+              <label class="part" id="Current__Inverted_Labels">Inverted Labels</label>
+            <br>
+            <br>
+              <label>Count &emsp;&emsp;:</label>
+              <label class="defective" id="Current__Inverted_Labels__Count">0</label>
+            <br>
+          </div>
+          <div class="form__input" id="Current_Ink_Spills">
+            <br>
+              <label>Defect&emsp;&hairsp;:</label>
+              <label class="part" id="Current__Ink_Spills">Ink Spills</label>
+            <br>
+            <br>
+              <label>Count &emsp;&emsp;:</label>
+              <label class="defective" id="Current__Ink_Spills__Count">0</label>
+            <br>
+          </div>
+        </form>
+      </div>
+      <div class="switch" id="switch-cnt">
+        <div class="switch__circle"></div>
+        <div class="switch__circle switch__circle--t"></div>
+        <div class="switch__container" id="switch-c1">
+          <button class="switch__button button switch-btn" onclick="start()">START</button>
+        </div>
+        <div class="switch__container is-hidden" id="switch-c2">
+          <button class="switch__button button switch-btn" onclick="stop()">STOP</button>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
